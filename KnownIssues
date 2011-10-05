@@ -1,0 +1,5 @@
+There is no "Rename Category" in the menu although you can rename a category by double-clicking it in the list.  If you rename a category, the link between the category and the note is broken.
+
+TODO: Figure out core data relationships.
+
+There are also a few deprecated methods as this was originally built prior to OSX Lion (10.7) being released.
