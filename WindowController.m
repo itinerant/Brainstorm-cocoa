@@ -115,6 +115,18 @@
 	[noteList editColumn:0 row:[notes selectionIndex] withEvent:nil select:YES];
 }
 
+- (IBAction)changeCategory:(id)sender {
+	if([categories selectionIndex] != NSNotFound && [notes selectionIndex] != NSNotFound)
+	{
+    NSManagedObject *note = [[notes selectedObjects] objectAtIndex:0];
+    [note setValue:[moveCategory titleOfSelectedItem] forKey:@"category"];
+    
+    [movePanel close];
+  }
+  else
+    NSRunAlertPanel(@"Brainstorm Error", @"You must select a note and a category before moving a note.", @"Ok", @"", @"");
+}
+
 - (IBAction)saveAsRTF:(id)sender {
 	NSSavePanel *savePanel = [NSSavePanel savePanel];
 	[savePanel setRequiredFileType:@"rtf"];

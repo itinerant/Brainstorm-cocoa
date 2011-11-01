@@ -5,6 +5,8 @@
 	IBOutlet id categoryList;
 	IBOutlet id noteList;
 	IBOutlet id editor;
+  IBOutlet id movePanel;
+  IBOutlet id moveCategory;
 
 	IBOutlet NSArrayController *categories;
 	IBOutlet NSArrayController *notes;
@@ -19,6 +21,7 @@
 - (IBAction)addNote:(id)sender;
 - (IBAction)deleteNote:(id)sender;
 - (IBAction)renameNote:(id)sender;
+- (IBAction)changeCategory:(id)sender;
 
 - (IBAction)saveAsRTF:(id)sender;
 - (IBAction)exportAll:(id)sender;
